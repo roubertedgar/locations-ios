@@ -1,0 +1,15 @@
+.idea
+.DS_Store
+eateat/.DS_Store
+
+*.xcodeproj/*.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcodeproj/xcshareddata
+xcuserdata
+Xcshareddata
+
+
+Podfile.lock
+Pods
+
+DerivedData/

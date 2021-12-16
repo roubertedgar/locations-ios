@@ -1,0 +1,6 @@
+"app_name" = "Eat Eat";
+"emaiNameText" = "E-mail";
+"passwordText" = "Senha";
+"loginTextImputHint" = "exemplo@email.com";
+"passwordTextImputHint" = "******";
+"login_button_text" = "Entrar";
