@@ -4,3 +4,5 @@
 "loginTextImputHint" = "example@email.com";
 "passwordTextImputHint" = "******";
 "login_button_text" = "Login";
+
+"location_details_see_all_reviews" = "See all reviews";

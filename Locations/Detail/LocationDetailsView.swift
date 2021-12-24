@@ -102,8 +102,6 @@ internal class LocationDetailsView {
         it.spacing = 16.0
     }
     
-    
-    
     private func setupContentStack(){
         contentView.addSubview(contentStack)
         
@@ -130,14 +128,21 @@ internal class LocationDetailsView {
         contentStack.addArrangedSubview(Label().apply { it in it.text = "Review"})
     }
     
-    
-    
     private func updateReviews(_ reviews : Array<Review>){
+        var lastReview : UIView = View()
+        
         reviews.forEach{ review in
-            self.contentStack.addArrangedSubview(
-                ReviewCell().apply(closure: { it in it.bind(review)})
-            )
+            lastReview = ReviewCell().apply(closure: { it in it.bind(review)})
+            self.contentStack.addArrangedSubview(lastReview)
         }
+        
+        contentStack.setCustomSpacing(40, after: lastReview)
+        contentStack.addArrangedSubview(
+            Button().apply{ it in
+                it.localizedTitle = "location_details_see_all_reviews"
+                it.contentHorizontalAlignment = .trailing
+            }
+        )
     }
     
     private func setupHeaderImageStratch(){
