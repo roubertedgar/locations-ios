@@ -142,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				33E60195276B1F2A00E31052 /* HttpManager.swift */,
-				33C95AB227767EB9008183C3 /* Dimens.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -169,6 +168,7 @@
 		33E6019C276B1F2A00E31052 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				33C95AB227767EB9008183C3 /* Dimens.swift */,
 				33E6019D276B1F2A00E31052 /* Label.swift */,
 				33E6019E276B1F2A00E31052 /* View.swift */,
 				33E6019F276B1F2A00E31052 /* StackView.swift */,
