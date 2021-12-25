@@ -139,6 +139,7 @@ internal class LocationDetailsView {
         contentStack.setCustomSpacing(40, after: lastReview)
         contentStack.addArrangedSubview(
             Button().apply{ it in
+                it.setTitleColor(.black, for: .normal)
                 it.localizedTitle = "location_details_see_all_reviews"
                 it.contentHorizontalAlignment = .trailing
             }
