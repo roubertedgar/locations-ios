@@ -1,7 +1,7 @@
 import UIKit
 import Cosmos
 
-internal class LocationDetailsView {
+internal class LocationDetailsView: View {
     
     private var view : UIView = UIView()
     
@@ -54,8 +54,8 @@ internal class LocationDetailsView {
     
     private func setupHeader(){
         header.backgroundColor = .blue
-        header.layoutMargins = UIEdgeInsets(top: view.dimens.small, left: view.dimens.normal, bottom: view.dimens.small, right: view.dimens.normal)
-        header.spacing = view.dimens.small
+        header.layoutMargins = UIEdgeInsets(top: dimens.small, left: dimens.normal, bottom: dimens.small, right: dimens.normal)
+        header.spacing = dimens.small
         header.addArrangedSubview(titleTextView)
         header.addArrangedSubview(ratingSarts)
         
@@ -95,13 +95,13 @@ internal class LocationDetailsView {
     }
     
     //MARK: ContentStack Setup
-    private let contentStack = StackView().apply { it in
-        it.backgroundColor = .yellow
-        it.layoutMargins = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
-        it.spacing = 16.0
-    }
+    private let contentStack = StackView()
     
     private func setupContentStack(){
+        contentStack.backgroundColor = .yellow
+        contentStack.layoutMargins = UIEdgeInsets(top: dimens.tinny, left: dimens.normal, bottom: dimens.tinny, right: dimens.normal)
+        contentStack.spacing = dimens.large
+        
         contentView.addSubview(contentStack)
         
         NSLayoutConstraint.activate([

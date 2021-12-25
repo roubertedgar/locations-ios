@@ -45,7 +45,7 @@ class ReviewCell : View {
     
     private func setupConstraints(){
         NSLayoutConstraint.activate([
-            profilePicture.topAnchor.constraint(equalTo: topAnchor, constant: dimens.normal),
+            profilePicture.topAnchor.constraint(equalTo: topAnchor),
             profilePicture.leadingAnchor.constraint(equalTo: leadingAnchor),
             profilePicture.widthAnchor.constraint(equalToConstant: dimens.pictureWidth),
             profilePicture.heightAnchor.constraint(equalTo: profilePicture.widthAnchor, multiplier: 1),
@@ -65,7 +65,7 @@ class ReviewCell : View {
             author.topAnchor.constraint(equalTo: review.bottomAnchor, constant: dimens.tinny),
             author.leadingAnchor.constraint(equalTo: stars.leadingAnchor),
             author.trailingAnchor.constraint(equalTo: stars.trailingAnchor),
-            author.bottomAnchor.constraint(equalTo: bottomAnchor, constant: dimens.normal)
+            author.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     

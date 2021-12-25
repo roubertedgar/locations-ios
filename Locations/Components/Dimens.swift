@@ -15,8 +15,8 @@ class Dimens {
     var tinny : Double{
         switch scale{
         case 1.0 : return 2.0
-        case 2.0 : return 6.0
-        default : return 10.0
+        case 2.0 : return 4.0
+        default : return 8.0
         }
     }
     
