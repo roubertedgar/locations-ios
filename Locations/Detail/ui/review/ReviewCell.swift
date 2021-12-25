@@ -4,8 +4,6 @@ import QuartzCore
 
 class ReviewCell : View {
     
-    private let dimens = Dimens.instance
-    
     private let profilePicture = ImageView().apply { it in
         it.loadImage("", placeholder: PlaceHolder(color: .blue))
         it.layer.cornerRadius = Dimens.instance.pictureWidth / 2.0

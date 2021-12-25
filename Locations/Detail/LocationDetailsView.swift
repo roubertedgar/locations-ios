@@ -23,11 +23,7 @@ internal class LocationDetailsView {
         it.clipsToBounds = true
     }
     
-    let header = StackView().apply { it in
-        it.backgroundColor = .blue
-        it.layoutMargins = UIEdgeInsets(top: 12, left: 20, bottom: 12, right: 20)
-        it.spacing = 8
-    }
+    let header = StackView()
     
     let titleTextView = Label().apply { it in
         it.text = "Opa Bichão"
@@ -57,6 +53,9 @@ internal class LocationDetailsView {
     }
     
     private func setupHeader(){
+        header.backgroundColor = .blue
+        header.layoutMargins = UIEdgeInsets(top: view.dimens.small, left: view.dimens.normal, bottom: view.dimens.small, right: view.dimens.normal)
+        header.spacing = view.dimens.small
         header.addArrangedSubview(titleTextView)
         header.addArrangedSubview(ratingSarts)
         
