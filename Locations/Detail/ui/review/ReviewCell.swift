@@ -6,7 +6,7 @@ class ReviewCell : View {
     
     private let profilePicture = ImageView().apply { it in
         it.loadImage("", placeholder: PlaceHolder(color: .blue))
-        it.layer.cornerRadius = Dimens.instance.pictureWidth / 2.0
+        it.layer.cornerRadius = Dimens.instance.reviewPictureWidth / 2.0
         it.clipsToBounds = true
     }
     
@@ -47,7 +47,7 @@ class ReviewCell : View {
         NSLayoutConstraint.activate([
             profilePicture.topAnchor.constraint(equalTo: topAnchor),
             profilePicture.leadingAnchor.constraint(equalTo: leadingAnchor),
-            profilePicture.widthAnchor.constraint(equalToConstant: dimens.pictureWidth),
+            profilePicture.widthAnchor.constraint(equalToConstant: dimens.reviewPictureWidth),
             profilePicture.heightAnchor.constraint(equalTo: profilePicture.widthAnchor, multiplier: 1),
 
             stars.topAnchor.constraint(equalTo: profilePicture.topAnchor),

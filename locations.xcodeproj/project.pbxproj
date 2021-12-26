@@ -12,8 +12,8 @@
 		3378CBA3276B119900C32503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3378CBA2276B119900C32503 /* Assets.xcassets */; };
 		3378CBAE276B11ED00C32503 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378CBAD276B11ED00C32503 /* SplashViewController.swift */; };
 		33C95AB327767EB9008183C3 /* Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C95AB227767EB9008183C3 /* Dimens.swift */; };
-		33C95AB52776ABF3008183C3 /* DimensReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C95AB42776ABF3008183C3 /* DimensReviewCell.swift */; };
 		33C95AB92776B8DE008183C3 /* UIviewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C95AB82776B8DE008183C3 /* UIviewExt.swift */; };
+		33C95ABB2777B0BE008183C3 /* LocationDetailsDimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C95ABA2777B0BE008183C3 /* LocationDetailsDimens.swift */; };
 		33CA1462276B1A2C002CDDCD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1461276B1A2C002CDDCD /* Kingfisher */; };
 		33CA1465276B1A3A002CDDCD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1464276B1A3A002CDDCD /* Alamofire */; };
 		33CA1468276B1A52002CDDCD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1467276B1A52002CDDCD /* Cosmos */; };
@@ -56,8 +56,8 @@
 		3378CBA7276B119900C32503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3378CBAD276B11ED00C32503 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		33C95AB227767EB9008183C3 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
-		33C95AB42776ABF3008183C3 /* DimensReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensReviewCell.swift; sourceTree = "<group>"; };
 		33C95AB82776B8DE008183C3 /* UIviewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIviewExt.swift; sourceTree = "<group>"; };
+		33C95ABA2777B0BE008183C3 /* LocationDetailsDimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsDimens.swift; sourceTree = "<group>"; };
 		33E60195276B1F2A00E31052 /* HttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		33E60197276B1F2A00E31052 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		33E60198276B1F2A00E31052 /* SplitHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHttpClient.swift; sourceTree = "<group>"; };
@@ -203,9 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				33E601B1276B1F2A00E31052 /* ui */,
-				33E601B5276B1F2A00E31052 /* LocationDetailInfoView.swift */,
-				33E601B6276B1F2A00E31052 /* LocationDetailsView.swift */,
-				33E601B7276B1F2A00E31052 /* LocationDetailsViewController.swift */,
 				33E601B8276B1F2A00E31052 /* data */,
 			);
 			path = Detail;
@@ -215,6 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				33E601B2276B1F2A00E31052 /* review */,
+				33E601B5276B1F2A00E31052 /* LocationDetailInfoView.swift */,
+				33E601B6276B1F2A00E31052 /* LocationDetailsView.swift */,
+				33E601B7276B1F2A00E31052 /* LocationDetailsViewController.swift */,
+				33C95ABA2777B0BE008183C3 /* LocationDetailsDimens.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -223,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				33E601B4276B1F2A00E31052 /* ReviewCell.swift */,
-				33C95AB42776ABF3008183C3 /* DimensReviewCell.swift */,
 			);
 			path = review;
 			sourceTree = "<group>";
@@ -327,7 +327,6 @@
 				33C95AB327767EB9008183C3 /* Dimens.swift in Sources */,
 				33E601C2276B1F2A00E31052 /* CollectionViewCell.swift in Sources */,
 				33E601BC276B1F2A00E31052 /* SplitHttpClient.swift in Sources */,
-				33C95AB52776ABF3008183C3 /* DimensReviewCell.swift in Sources */,
 				33E601CB276B1F2A00E31052 /* Button.swift in Sources */,
 				33E601C0276B1F2A00E31052 /* View.swift in Sources */,
 				33E601BD276B1F2A00E31052 /* LocationRemoteEntity.swift in Sources */,
@@ -348,6 +347,7 @@
 				33E601D6276B1F2A00E31052 /* Review.swift in Sources */,
 				33E601CA276B1F2A00E31052 /* RatingBar.swift in Sources */,
 				3378CB9C276B119800C32503 /* SceneDelegate.swift in Sources */,
+				33C95ABB2777B0BE008183C3 /* LocationDetailsDimens.swift in Sources */,
 				33E601BA276B1F2A00E31052 /* HttpManager.swift in Sources */,
 				33E601CE276B1F2A00E31052 /* LocationListViewController.swift in Sources */,
 				33E601BE276B1F2A00E31052 /* LocationListRemoteEntity.swift in Sources */,

@@ -16,7 +16,6 @@ internal class LocationDetailsView: View {
     }
     
     private var imageHeightConstraint = NSLayoutConstraint()
-    private let imageHeaderHeight = 200.0
     
     let image = ImageView().apply { it in
         it.contentMode = .scaleAspectFill
@@ -42,7 +41,7 @@ internal class LocationDetailsView: View {
     }
     
     private func setupImage(){
-        imageHeightConstraint = image.heightAnchor.constraint(equalToConstant: imageHeaderHeight)
+        imageHeightConstraint = image.heightAnchor.constraint(equalToConstant: dimens.headerImageHeight)
         
         NSLayoutConstraint.activate([
             image.topAnchor.constraint(equalTo: view.topAnchor),
@@ -148,7 +147,7 @@ internal class LocationDetailsView: View {
     private func setupHeaderImageStratch(){
         scrollView.didScroll{ offset in
             let heightOffset = offset.y * -1
-            self.imageHeightConstraint.constant = self.imageHeaderHeight + heightOffset
+            self.imageHeightConstraint.constant = self.dimens.headerImageHeight + heightOffset
         }
     }
 }
