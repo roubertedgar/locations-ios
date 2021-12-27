@@ -151,11 +151,14 @@ internal class LocationDetailsView: View {
         )
     }
     
+    var topbarHeight : CGFloat = 0.0
+    
     private func setupHeaderImageStratch(){
-        let navBarHeight = 55.0
+        
         scrollView.didScroll{ offset in
-            let heightOffset = offset.y * -1
-            let height = max(navBarHeight, self.dimens.headerImageHeight + heightOffset)
+            let heightOffset = self.dimens.headerImageHeight + (offset.y * -1)
+            let height = max(self.topbarHeight, heightOffset)
+            
             self.imageHeightConstraint.constant = height
         }
     }

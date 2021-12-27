@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332C0C74277A6B08007CFCD1 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C0C73277A6B08007CFCD1 /* ViewControllerExt.swift */; };
 		3378CB9A276B119800C32503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378CB99276B119800C32503 /* AppDelegate.swift */; };
 		3378CB9C276B119800C32503 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378CB9B276B119800C32503 /* SceneDelegate.swift */; };
 		3378CBA3276B119900C32503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3378CBA2276B119900C32503 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		332C0C73277A6B08007CFCD1 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		3378CB96276B119800C32503 /* locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3378CB99276B119800C32503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3378CB9B276B119800C32503 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				33E601A9276B1F2A00E31052 /* Button.swift */,
 				33E601AA276B1F2A00E31052 /* NavigationController.swift */,
 				33C95AB82776B8DE008183C3 /* UIviewExt.swift */,
+				332C0C73277A6B08007CFCD1 /* ViewControllerExt.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				33E601C2276B1F2A00E31052 /* CollectionViewCell.swift in Sources */,
 				33E601BC276B1F2A00E31052 /* SplitHttpClient.swift in Sources */,
 				33E601CB276B1F2A00E31052 /* Button.swift in Sources */,
+				332C0C74277A6B08007CFCD1 /* ViewControllerExt.swift in Sources */,
 				33E601C0276B1F2A00E31052 /* View.swift in Sources */,
 				33E601BD276B1F2A00E31052 /* LocationRemoteEntity.swift in Sources */,
 				33E601C8276B1F2A00E31052 /* UIResponderExt.swift in Sources */,

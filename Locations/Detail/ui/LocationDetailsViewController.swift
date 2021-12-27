@@ -7,6 +7,8 @@ class LocationDetailsViewController : UIViewController {
     override func loadView() {
         super.loadView()
         
+        locationDetailsView.topbarHeight = topBarHeight
+        
         view.addSubview(locationDetailsView)
         view.backgroundColor = .white
         NSLayoutConstraint.activate([
@@ -15,7 +17,7 @@ class LocationDetailsViewController : UIViewController {
             locationDetailsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             locationDetailsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
+    
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
