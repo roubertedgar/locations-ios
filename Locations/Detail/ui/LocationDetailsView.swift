@@ -3,16 +3,18 @@ import Cosmos
 
 internal class LocationDetailsView: View {
     
-    private var view : UIView = UIView()
-    
-    func load(view: UIView){
-        self.view = view
+    override init(){
+        super.init()
         setupView()
         setupImage()
         setupHeader()
         setupScrollView()
         setupContentStack()
         setupHeaderImageStratch()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
     
     private var imageHeightConstraint = NSLayoutConstraint()
@@ -22,57 +24,62 @@ internal class LocationDetailsView: View {
         it.clipsToBounds = true
     }
     
-    let header = StackView()
+    let header = View()
     
-    let titleTextView = Label().apply { it in
-        it.text = "Opa Bichão"
-    }
-    
-    let ratingSarts = CosmosView().apply { it in
-        it.rating = 4
-        it.settings.updateOnTouch = false
-        it.text = "4.0"
-    }
-    
-    private func setupView(){
-        view.addSubview(image)
-        view.addSubview(header)
-        view.addSubview(scrollView)
-    }
-    
-    private func setupImage(){
-        imageHeightConstraint = image.heightAnchor.constraint(equalToConstant: dimens.headerImageHeight)
-        
-        NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: view.topAnchor),
-            image.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            image.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageHeightConstraint
-        ])
-    }
-    
-    private func setupHeader(){
-        header.backgroundColor = .blue
-        header.layoutMargins = UIEdgeInsets(top: dimens.small, left: dimens.normal, bottom: dimens.small, right: dimens.normal)
-        header.spacing = dimens.small
-        header.addArrangedSubview(titleTextView)
-        header.addArrangedSubview(ratingSarts)
-        
-        NSLayoutConstraint.activate([
-            header.heightAnchor.constraint(equalToConstant: 100.0),
-            header.topAnchor.constraint(equalTo: image.bottomAnchor),
-            header.leadingAnchor.constraint(equalTo: image.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: image.trailingAnchor)
-        ])
-    }
-    
-    //MARK: Scroll setup
     private let scrollView = ScrollView().apply { it in
         it.backgroundColor = .red
         it.bounces = false
         it.isPagingEnabled = false
     }
     
+    private func setupView(){
+        addSubview(image)
+        addSubview(header)
+        addSubview(scrollView)
+    }
+    
+    let titleTextView = Label().apply { it in
+        it.text = "Opa Bichão"
+    }
+    
+    let ratingSarts = RatingBar().apply { it in
+        it.rating = 4
+        it.settings.updateOnTouch = false
+        it.text = "4.0"
+    }
+    
+    private func setupImage(){
+        imageHeightConstraint = image.heightAnchor.constraint(equalToConstant: dimens.headerImageHeight)
+        
+        NSLayoutConstraint.activate([
+            image.topAnchor.constraint(equalTo: topAnchor),
+            image.leadingAnchor.constraint(equalTo: leadingAnchor),
+            image.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageHeightConstraint
+        ])
+    }
+    
+    private func setupHeader(){
+        header.backgroundColor = .blue
+        header.addSubview(titleTextView)
+        header.addSubview(ratingSarts)
+        
+        NSLayoutConstraint.activate([
+            header.topAnchor.constraint(equalTo: image.bottomAnchor),
+            header.leadingAnchor.constraint(equalTo: leadingAnchor),
+            header.trailingAnchor.constraint(equalTo: trailingAnchor),
+            header.bottomAnchor.constraint(equalTo: ratingSarts.bottomAnchor, constant: dimens.normal),
+            
+            titleTextView.topAnchor.constraint(equalTo: header.topAnchor, constant: dimens.normal),
+            titleTextView.leadingAnchor.constraint(equalTo: header.leadingAnchor, constant: dimens.normal),
+            titleTextView.trailingAnchor.constraint(equalTo: header.trailingAnchor, constant: dimens.normal),
+            
+            ratingSarts.topAnchor.constraint(equalTo: titleTextView.bottomAnchor, constant: dimens.small),
+            ratingSarts.leadingAnchor.constraint(equalTo: titleTextView.leadingAnchor)
+        ])
+    }
+    
+    //MARK: Scroll setup
     private let contentView = View() .apply { it in
         it.backgroundColor = .yellow
     }
@@ -82,14 +89,14 @@ internal class LocationDetailsView: View {
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: header.bottomAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: header.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
     
@@ -145,9 +152,11 @@ internal class LocationDetailsView: View {
     }
     
     private func setupHeaderImageStratch(){
+        let navBarHeight = 55.0
         scrollView.didScroll{ offset in
             let heightOffset = offset.y * -1
-            self.imageHeightConstraint.constant = self.dimens.headerImageHeight + heightOffset
+            let height = max(navBarHeight, self.dimens.headerImageHeight + heightOffset)
+            self.imageHeightConstraint.constant = height
         }
     }
 }
