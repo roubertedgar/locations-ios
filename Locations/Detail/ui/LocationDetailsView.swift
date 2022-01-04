@@ -24,6 +24,11 @@ internal class LocationDetailsView: View {
         it.clipsToBounds = true
     }
     
+    let imageCover = View().apply { it in
+        it.backgroundColor = .blue
+        it.alpha = 0
+    }
+    
     let header = View()
     
     private let scrollView = ScrollView().apply { it in
@@ -34,6 +39,7 @@ internal class LocationDetailsView: View {
     
     private func setupView(){
         addSubview(image)
+        addSubview(imageCover)
         addSubview(header)
         addSubview(scrollView)
     }
@@ -55,7 +61,12 @@ internal class LocationDetailsView: View {
             image.topAnchor.constraint(equalTo: topAnchor),
             image.leadingAnchor.constraint(equalTo: leadingAnchor),
             image.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageHeightConstraint
+            imageHeightConstraint,
+            
+            imageCover.topAnchor.constraint(equalTo: image.topAnchor),
+            imageCover.leadingAnchor.constraint(equalTo: image.leadingAnchor),
+            imageCover.trailingAnchor.constraint(equalTo: image.trailingAnchor),
+            imageCover.bottomAnchor.constraint(equalTo: image.bottomAnchor)
         ])
     }
     
@@ -154,12 +165,17 @@ internal class LocationDetailsView: View {
     var topbarHeight : CGFloat = 0.0
     
     private func setupHeaderImageStratch(){
+        scrollView.didScroll{ self.onScroll($0)}
+    }
+    
+    private func onScroll(_ offset: CGPoint){
+        let heightOffset = dimens.headerImageHeight + (offset.y * -1)
         
-        scrollView.didScroll{ offset in
-            let heightOffset = self.dimens.headerImageHeight + (offset.y * -1)
-            let height = max(self.topbarHeight, heightOffset)
-            
-            self.imageHeightConstraint.constant = height
-        }
+        let alpha = 1 - 0.025 * (heightOffset - self.topbarHeight)
+        let height = max(self.topbarHeight, heightOffset)
+        
+        imageCover.alpha = alpha
+        imageHeightConstraint.constant = height
+        
     }
 }
