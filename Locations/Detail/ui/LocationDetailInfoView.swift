@@ -5,9 +5,9 @@ class LocationInfoView: View{
     private let workingHoursText = Label()
     private let phoneNumberText = Label()
     private let addressText = Label()
-    private let workingHoursIcon = ImageView().apply { it in it.image = UIImage(named: "ic_clock")}
-    private let phoneNumberIcon = ImageView().apply { it in it.image = UIImage(named: "ic_phone")}
-    private let addressIcon = ImageView().apply { it in it.image = UIImage(named: "ic_pin")}
+    private let workingHoursIcon = ImageView().apply { $0.image = UIImage(named: "ic_clock")}
+    private let phoneNumberIcon = ImageView().apply { $0.image = UIImage(named: "ic_phone")}
+    private let addressIcon = ImageView().apply { $0.image = UIImage(named: "ic_pin")}
     
     override init(){
         super.init()
