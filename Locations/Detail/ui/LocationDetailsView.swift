@@ -138,10 +138,10 @@ internal class LocationDetailsView: View {
     }
     
     private func setupContent(){
-        contentStack.addArrangedSubview(Label().apply { it in it.text = "Sobre"})
+        contentStack.addArrangedSubview(Label().apply { $0.localizedText = "about_label"})
         contentStack.addArrangedSubview(aboutText)
         contentStack.addArrangedSubview(locationDetailInfo)
-        contentStack.addArrangedSubview(Label().apply { it in it.text = "Review"})
+        contentStack.addArrangedSubview(Label().apply { it in it.localizedText = "review_label"})
     }
     
     private func updateReviews(_ reviews : Array<Review>){

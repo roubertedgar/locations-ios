@@ -5,4 +5,6 @@
 "passwordTextImputHint" = "******";
 "login_button_text" = "Login";
 
+"about_label" = "About";
+"review_label" = "Review";
 "location_details_see_all_reviews" = "See all reviews";
