@@ -10,23 +10,14 @@ class ReviewCell : View {
         it.clipsToBounds = true
     }
     
-    let stars = RatingBar().apply { it in
-        it.rating = 4
-        it.settings.updateOnTouch = false
-        it.text = ""
+    let stars = RatingBar().apply {
+        $0.settings.updateOnTouch = false
+        $0.text = ""
     }
     
-    private let title = Label().apply{ it in
-        it.text = "Tite"
-    }
-    
-    private let review = Label().apply { it in
-        it.text = "Review blabla"
-    }
-    
-    private let author = Label().apply { it in
-        it.text = "Edgar de Sousa from Brazil"
-    }
+    private let title = Label()
+    private let review = Label()
+    private let author = Label()
     
     override init(){
         super.init()
@@ -49,11 +40,11 @@ class ReviewCell : View {
             profilePicture.leadingAnchor.constraint(equalTo: leadingAnchor),
             profilePicture.widthAnchor.constraint(equalToConstant: dimens.reviewPictureWidth),
             profilePicture.heightAnchor.constraint(equalTo: profilePicture.widthAnchor, multiplier: 1),
-
+            
             stars.topAnchor.constraint(equalTo: profilePicture.topAnchor),
             stars.leadingAnchor.constraint(equalTo: profilePicture.trailingAnchor, constant: dimens.small),
             stars.trailingAnchor.constraint(equalTo: trailingAnchor),
-        
+            
             title.topAnchor.constraint(equalTo: stars.bottomAnchor, constant: dimens.tinny),
             title.leadingAnchor.constraint(equalTo: stars.leadingAnchor),
             title.trailingAnchor.constraint(equalTo: stars.trailingAnchor),
@@ -69,7 +60,10 @@ class ReviewCell : View {
         ])
     }
     
-    func bind(_ review : Review){
-        title.text = review.author
+    func bind(_ reviewItem : Review){
+        stars.rating = reviewItem.rating
+        title.text = reviewItem.author
+        review.text = reviewItem.review
+        author.text = reviewItem.author
     }
 }

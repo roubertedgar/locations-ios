@@ -31,7 +31,7 @@ class LocationDetailsViewController : UIViewController {
                                         phoneNumber: "+55 37 991429601",
                                         address: "Rua do ouro, 297 - Serra\nBelo Horizonte - MG")
         locationDetailsView.locationDetailInfo.bind ( info: locationInfo)
-        locationDetailsView.reviews = [Review(author: "Edgarrr"),Review(author: "Edgarrr"),Review(author: "Edgarrr")]
+        locationDetailsView.reviews = [Review(title: "Awesome", review: "A awesome place to go with your frieds", author: "Edgar de Souza", rating: 4.0)]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
