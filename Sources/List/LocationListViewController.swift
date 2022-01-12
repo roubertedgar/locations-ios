@@ -1,18 +1,26 @@
 import UIKit
 import Combine
 
-class LocationListViewController: UIViewController {
+class LocationListViewController: ViewController {
     
+    private let viewModel : LocationListViewModel
     
-    private let viewModel = LocationListViewModel()
     private var bindings = Set<AnyCancellable>()
-    
     private var locationCollectionController = LocationCollectionController()
     private var locationCollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: ColumnLayout())
     
+    init(viewModel : LocationListViewModel) {
+        self.viewModel = viewModel
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupObservers()
         viewModel.loadLocations()
     }

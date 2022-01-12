@@ -6,7 +6,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene: UIWindowScene = scene as? UIWindowScene else {return}
-        
+        registerProviderFactories()
         styleNavigationBar()
         setupApplicationStart(windowScene)
     }
@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupApplicationStart(_ windowScene: UIWindowScene) {
         let navigationController = NavigationController()
-        navigationController.viewControllers = [SplashViewController()]
+        navigationController.viewControllers = [AppComponent().splashViewController]
         navigationController.setNavigationBarHidden(true, animated: false)
         
         let window = UIWindow(windowScene: windowScene)

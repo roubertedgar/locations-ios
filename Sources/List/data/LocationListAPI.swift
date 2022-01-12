@@ -1,13 +1,17 @@
 import Foundation
 import Combine
 
-class SplitHttpClient {
+class LocationListAPI {
     
-    let httpManager = HttpManager(baseUrl: "https://hotmart-mobile-app.herokuapp.com")
+    private let httpClient : HttpClient
     
-    func fetchSplits() ->  AnyPublisher<Array<Location>, Error>{
+    init(httpClient: HttpClient){
+        self.httpClient = httpClient
+    }
+    
+    func fetchLocations() ->  AnyPublisher<Array<Location>, Error>{
         
-        httpManager.get(path: "/locations").publishString().tryMap{ response in
+        httpClient.get(path: "/locations").publishString().tryMap{ response in
             switch response.result {
             case let .success(data):
                 return self.parseResult(data)

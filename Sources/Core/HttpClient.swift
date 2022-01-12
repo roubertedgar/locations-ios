@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-public class HttpManager {
+public class HttpClient {
  
     private let baseUrl: String
 
