@@ -10,7 +10,7 @@ install_needle(){
 
 generate_sources(){
     echo "Generating sources!"
-    SOURCEKIT_LOGGING=0 needle generate ../Sources/GeneratedDependencyInjection.swift ../Sources
+    SOURCEKIT_LOGGING=0 needle generate Sources/GeneratedDependencyInjection.swift Sources
 }
 
 install_needle
