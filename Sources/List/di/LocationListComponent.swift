@@ -4,6 +4,7 @@ import UIKit
 class LocationListComponent : Component<EmptyDependency>, LocationListFactory {
     var httpClient : HttpClient{
         return HttpClient.Builder(baseUrl: "https://hotmart-mobile-app.herokuapp.com")
+            .withRequestTimeout(seconds: 15)
             .build()
     }
     

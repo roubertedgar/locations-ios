@@ -29,8 +29,19 @@ public class HttpClient {
             self.baseUrl = baseUrl
         }
         
-        func withInterceptor(interceptor: Interceptor){
+        func withInterceptor(interceptor: Interceptor) -> HttpClient.Builder {
             interceptors.append(interceptor)
+            return self
+        }
+        
+        func withRequestTimeout(seconds : Int) -> HttpClient.Builder {
+            requestTimeout = TimeInterval(seconds)
+            return self
+        }
+        
+        func withResourceTimeout(seconds : Int) -> HttpClient.Builder {
+            resourceTimeout = TimeInterval(seconds)
+            return self
         }
         
         func build() -> HttpClient {
