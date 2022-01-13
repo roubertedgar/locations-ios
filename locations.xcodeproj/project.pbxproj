@@ -36,7 +36,6 @@
 		3387646F278F41FF0054D7C1 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387643E278F41FF0054D7C1 /* LocationDetailsViewController.swift */; };
 		33876470278F41FF0054D7C1 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876440278F41FF0054D7C1 /* Review.swift */; };
 		33876471278F41FF0054D7C1 /* LocationListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876444278F41FF0054D7C1 /* LocationListComponent.swift */; };
-		33876472278F41FF0054D7C1 /* LocationListDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876445278F41FF0054D7C1 /* LocationListDependency.swift */; };
 		33876473278F41FF0054D7C1 /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876446278F41FF0054D7C1 /* LocationViewCell.swift */; };
 		33876474278F41FF0054D7C1 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876447278F41FF0054D7C1 /* LocationListViewController.swift */; };
 		33876475278F41FF0054D7C1 /* LocationCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876448278F41FF0054D7C1 /* LocationCollectionController.swift */; };
@@ -86,7 +85,6 @@
 		3387643E278F41FF0054D7C1 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		33876440278F41FF0054D7C1 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		33876444278F41FF0054D7C1 /* LocationListComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListComponent.swift; sourceTree = "<group>"; };
-		33876445278F41FF0054D7C1 /* LocationListDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListDependency.swift; sourceTree = "<group>"; };
 		33876446278F41FF0054D7C1 /* LocationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
 		33876447278F41FF0054D7C1 /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		33876448278F41FF0054D7C1 /* LocationCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCollectionController.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				33876444278F41FF0054D7C1 /* LocationListComponent.swift */,
-				33876445278F41FF0054D7C1 /* LocationListDependency.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -385,7 +382,6 @@
 				3387646B278F41FF0054D7C1 /* LocationDetailInfoView.swift in Sources */,
 				33876467278F41FF0054D7C1 /* ImageView.swift in Sources */,
 				33876465278F41FF0054D7C1 /* Dimens.swift in Sources */,
-				33876472278F41FF0054D7C1 /* LocationListDependency.swift in Sources */,
 				33876458278F41FF0054D7C1 /* NeedleGenerated.swift in Sources */,
 				3387645C278F41FF0054D7C1 /* ViewControllerExt.swift in Sources */,
 				33876477278F41FF0054D7C1 /* LocationListAPI.swift in Sources */,

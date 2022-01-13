@@ -3,7 +3,8 @@ import UIKit
 
 class LocationListComponent : Component<EmptyDependency>, LocationListFactory {
     var httpClient : HttpClient{
-        return HttpClient(baseUrl: "https://hotmart-mobile-app.herokuapp.com")
+        return HttpClient.Builder(baseUrl: "https://hotmart-mobile-app.herokuapp.com")
+            .build()
     }
     
     var locationsAPI : LocationListAPI {
