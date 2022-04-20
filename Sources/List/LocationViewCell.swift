@@ -48,19 +48,20 @@ class LocationViewCell : CollectionViewCell {
     }
     
     private func setupConstraints(){
-        locationImage.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        locationImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        locationImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        locationImage.heightAnchor.constraint(equalTo: locationImage.widthAnchor, multiplier: 3.0/4.0).isActive = true
-        locationTitle.topAnchor.constraint(equalTo: locationImage.bottomAnchor, constant: 6).isActive = true
-        locationTitle.leadingAnchor.constraint(equalTo: locationImage.leadingAnchor, constant: 8).isActive = true
-        locationTitle.trailingAnchor.constraint(equalTo: locationImage.trailingAnchor, constant: -8).isActive = true
-
-    
-        locationType.topAnchor.constraint(equalTo:locationTitle.bottomAnchor, constant: 4).isActive = true
-        locationType.leadingAnchor.constraint(equalTo: locationTitle.leadingAnchor).isActive = true
-        locationType.trailingAnchor.constraint(equalTo: locationTitle.trailingAnchor).isActive = true
-        locationType.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8).isActive = true
+        NSLayoutConstraint.activate([
+            locationImage.topAnchor.constraint(equalTo: contentView.topAnchor),
+            locationImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            locationImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            locationImage.heightAnchor.constraint(equalTo: locationImage.widthAnchor, multiplier: 3.0/4.0),
+            locationTitle.topAnchor.constraint(equalTo: locationImage.bottomAnchor, constant: 6),
+            locationTitle.leadingAnchor.constraint(equalTo: locationImage.leadingAnchor, constant: 8),
+            locationTitle.trailingAnchor.constraint(equalTo: locationImage.trailingAnchor, constant: -8),
+            
+            locationType.topAnchor.constraint(equalTo:locationTitle.bottomAnchor, constant: 4),
+            locationType.leadingAnchor.constraint(equalTo: locationTitle.leadingAnchor),
+            locationType.trailingAnchor.constraint(equalTo: locationTitle.trailingAnchor),
+            locationType.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8)
+        ])
     }
     
 }
