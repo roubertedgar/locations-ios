@@ -18,7 +18,8 @@ class CollectionViewCell : UICollectionViewCell {
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        widthConstraint.constant = layoutAttributes.size.width
+        let width = layoutAttributes.size.width
+        widthConstraint.constant = width
         contentView.setNeedsLayout()
         contentView.layoutIfNeeded()
         

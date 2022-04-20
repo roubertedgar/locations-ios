@@ -6,10 +6,11 @@ class LocationListViewController: ViewController {
     private let viewModel : LocationListViewModel
     
     private var bindings = Set<AnyCancellable>()
-    private var locationCollectionController = LocationCollectionController()
-    private var locationCollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: ColumnLayout())
     
-    init(viewModel : LocationListViewModel) {
+    private let locationCollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: ColumnLayout(columnNumber: 2, insets: UIEdgeInsets(top: Dimens.instance.normal, left: Dimens.instance.small, bottom: Dimens.instance.tinny, right: Dimens.instance.small)))
+    private var locationCollectionController = LocationCollectionController()
+    
+    required init(viewModel : LocationListViewModel) {
         self.viewModel = viewModel
         super.init()
     }
