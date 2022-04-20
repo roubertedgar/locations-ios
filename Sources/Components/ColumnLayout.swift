@@ -42,7 +42,7 @@ class ColumnLayout : UICollectionViewFlowLayout{
         let contentBounds = insets.right + insets.right/2
         if(contentBounds > 0.0) {bounds = contentBounds} else {bounds = minimumInteritemSpacing}
         let availableWidth = collectionView.bounds.size.width / CGFloat(columnNumber) - bounds
-        
+        //blabla
         self.estimatedItemSize = CGSize(width: availableWidth , height: 0)
     }
 }
