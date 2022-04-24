@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331258332815191300D574C2 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331258322815191300D574C2 /* LocationListView.swift */; };
 		33876454278F41FF0054D7C1 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387641F278F41FF0054D7C1 /* HttpClient.swift */; };
 		33876456278F41FF0054D7C1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876421278F41FF0054D7C1 /* SplashViewController.swift */; };
 		33876457278F41FF0054D7C1 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876422278F41FF0054D7C1 /* AppComponent.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		331258322815191300D574C2 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		3378CB96276B119800C32503 /* locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3387641F278F41FF0054D7C1 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		33876420278F41FF0054D7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				33876447278F41FF0054D7C1 /* LocationListViewController.swift */,
 				33876448278F41FF0054D7C1 /* LocationCollectionController.swift */,
 				3387644F278F41FF0054D7C1 /* LocationListViewModel.swift */,
+				331258322815191300D574C2 /* LocationListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33876471278F41FF0054D7C1 /* LocationListComponent.swift in Sources */,
+				331258332815191300D574C2 /* LocationListView.swift in Sources */,
 				3387647A278F41FF0054D7C1 /* LocationListViewModel.swift in Sources */,
 				33876473278F41FF0054D7C1 /* LocationViewCell.swift in Sources */,
 				3387646E278F41FF0054D7C1 /* LocationDetailsView.swift in Sources */,
