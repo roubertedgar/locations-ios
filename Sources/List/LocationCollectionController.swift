@@ -2,7 +2,7 @@ import UIKit
 
 class LocationCollectionController:NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
-    var splits: [Location] = Array()
+    var locations: [Location] = Array()
     private var didSelected: (Location)-> Void = {(split) in}
     
     func didSelectSplit(_ didSelected:@escaping (Location)-> Void){
@@ -10,17 +10,17 @@ class LocationCollectionController:NSObject, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelected(splits[indexPath.row])
+        didSelected(locations[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return splits.count
+        return locations.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocationViewCell.identifier, for: indexPath) as! LocationViewCell
         
-        let location = splits[indexPath.row]
+        let location = locations[indexPath.row]
         cell.location = location
         
         return cell

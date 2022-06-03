@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  locations
-//
-//  Created by Roubert Edgar on 16/12/21.
-//
-
 import UIKit
 
 @main

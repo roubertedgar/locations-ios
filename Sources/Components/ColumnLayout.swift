@@ -1,29 +1,13 @@
 import UIKit
+import SwiftUI
 
 class ColumnLayout : UICollectionViewFlowLayout{
     
-    private var columnNumber : Int = 1
-    private var insets = UIEdgeInsets()
+    var columnNumber : Int = 1
+    var insets = UIEdgeInsets()
     
-    required init(columnNumber : Int, insets: UIEdgeInsets) {
-        if columnNumber < 0 {
-            self.columnNumber = 1
-        }else{
-            self.columnNumber = columnNumber
-        }
-        
-        self.insets = insets
-        
+    override init() {
         super.init()
-        self.scrollDirection = .vertical
-    }
-    
-     convenience init(columnNumber : Int) {
-        self.init(columnNumber: columnNumber, insets: UIEdgeInsets())
-    }
-    
-     convenience init(insets : UIEdgeInsets) {
-        self.init(columnNumber: 1, insets: UIEdgeInsets())
     }
     
     required init?(coder: NSCoder) {
@@ -39,10 +23,48 @@ class ColumnLayout : UICollectionViewFlowLayout{
         
         collectionView.contentInset = insets
         
-        let contentBounds = insets.right + insets.right/2
+        let contentBounds = insets.right + insets.right/CGFloat(columnNumber)
         if(contentBounds > 0.0) {bounds = contentBounds} else {bounds = minimumInteritemSpacing}
-        let availableWidth = collectionView.bounds.size.width / CGFloat(columnNumber) - bounds
-        //blabla
+        let availableWidth = collectionView.bounds.size.width / CGFloat(columnNumber) - (bounds + 0.1)
+        
         self.estimatedItemSize = CGSize(width: availableWidth , height: 0)
+    }
+}
+
+protocol Builder {
+    associatedtype Builded
+    
+    func build() -> Builded
+}
+
+class ColumnLayoutBuilder : Builder {
+   
+    typealias Builded = ColumnLayout
+    
+    private var columnNumber = 1
+    private var insets = UIEdgeInsets()
+    private var lineSpacing = CGFloat(Dimens.instance.small)
+    
+    func with(columnNumber: Int) -> ColumnLayoutBuilder {
+        self.columnNumber = columnNumber
+        return self
+    }
+    
+    func with(insets: UIEdgeInsets) -> ColumnLayoutBuilder {
+        self.insets = insets
+        return self
+    }
+    
+    func with(lineSpacing: CGFloat) -> ColumnLayoutBuilder {
+        self.lineSpacing = lineSpacing
+        return self
+    }
+    
+    func build() -> ColumnLayout {
+         return ColumnLayout().apply(closure: { it in
+             it.insets = insets
+             it.columnNumber = columnNumber
+             it.minimumLineSpacing = lineSpacing
+         })
     }
 }
