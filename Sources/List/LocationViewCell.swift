@@ -11,19 +11,16 @@ class LocationViewCell : CollectionViewCell {
         }
     }
     
-    private let locationTitle: UILabel = {
-      let label = Label()
-        label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        return label
-    }()
+    private let locationTitle = Label().apply{ it in
+        it.textColor = .black
+        it.font = UIFont.boldSystemFont(ofSize: 16)
+        it.numberOfLines = 1
+    }
     
-    private let locationType: UILabel = {
-        let label = Label()
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 14)
-        return label
-    }()
+    private let locationType =  Label().apply{ it in
+        it.textColor = .black
+        it.font = UIFont.systemFont(ofSize: 14)
+    }
     
     private let locationImage: UIImageView = {
         let imageView = UIImageView(image: nil)
