@@ -53,6 +53,7 @@
 		33CA1465276B1A3A002CDDCD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1464276B1A3A002CDDCD /* Alamofire */; };
 		33CA1468276B1A52002CDDCD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1467276B1A52002CDDCD /* Cosmos */; };
 		CDD3588A285E8A0B00CDDACE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD35889285E8A0B00CDDACE /* Theme.swift */; };
+		CDD3588C2860046D00CDDACE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3588B2860046D00CDDACE /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		33876489278F4F6E0054D7C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3387648B278F50330054D7C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CDD35889285E8A0B00CDDACE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CDD3588B2860046D00CDDACE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				33876434278F41FF0054D7C1 /* RatingBar.swift */,
 				33876435278F41FF0054D7C1 /* Button.swift */,
 				33876436278F41FF0054D7C1 /* NavigationController.swift */,
+				CDD3588B2860046D00CDDACE /* CardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				3387646A278F41FF0054D7C1 /* NavigationController.swift in Sources */,
 				3387645D278F41FF0054D7C1 /* StackView.swift in Sources */,
 				33876459278F41FF0054D7C1 /* Label.swift in Sources */,
+				CDD3588C2860046D00CDDACE /* CardView.swift in Sources */,
 				33876476278F41FF0054D7C1 /* Location.swift in Sources */,
 				33876464278F41FF0054D7C1 /* ColumnLayout.swift in Sources */,
 				33876462278F41FF0054D7C1 /* ImageViewExtension.swift in Sources */,

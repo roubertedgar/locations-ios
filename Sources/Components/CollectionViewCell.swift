@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 class CollectionViewCell : UICollectionViewCell {
     
@@ -7,10 +8,9 @@ class CollectionViewCell : UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+    
         widthConstraint = contentView.widthAnchor.constraint(equalToConstant: 200)
         widthConstraint.isActive = true
-        theme()
     }
     
     required init?(coder: NSCoder) {
@@ -25,11 +25,6 @@ class CollectionViewCell : UICollectionViewCell {
         
         layoutAttributes.size = contentView.frame.size
         return super.preferredLayoutAttributesFitting(layoutAttributes)
-    }
-    
-    func theme(){
-        contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 6.0
     }
 }
 
