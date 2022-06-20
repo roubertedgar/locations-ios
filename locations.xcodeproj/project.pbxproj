@@ -169,26 +169,25 @@
 		33876424278F41FF0054D7C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CDD35888285E89FE00CDDACE /* Theme */,
-				33876425278F41FF0054D7C1 /* Label.swift */,
-				33876426278F41FF0054D7C1 /* ViewController.swift */,
-				33876427278F41FF0054D7C1 /* View.swift */,
-				33876428278F41FF0054D7C1 /* ViewControllerExt.swift */,
-				33876429278F41FF0054D7C1 /* StackView.swift */,
-				3387642A278F41FF0054D7C1 /* UIviewExt.swift */,
-				3387642B278F41FF0054D7C1 /* CollectionViewCell.swift */,
-				3387642C278F41FF0054D7C1 /* ScrollView.swift */,
+				CDD35888285E89FE00CDDACE /* Values */,
 				3387642D278F41FF0054D7C1 /* ApplyProtocol.swift */,
-				3387642E278F41FF0054D7C1 /* ImageViewExtension.swift */,
-				3387642F278F41FF0054D7C1 /* TextField.swift */,
-				33876430278F41FF0054D7C1 /* ColumnLayout.swift */,
-				33876431278F41FF0054D7C1 /* Dimens.swift */,
-				33876432278F41FF0054D7C1 /* UIResponderExt.swift */,
-				33876433278F41FF0054D7C1 /* ImageView.swift */,
-				33876434278F41FF0054D7C1 /* RatingBar.swift */,
 				33876435278F41FF0054D7C1 /* Button.swift */,
-				33876436278F41FF0054D7C1 /* NavigationController.swift */,
 				CDD3588B2860046D00CDDACE /* CardView.swift */,
+				3387642B278F41FF0054D7C1 /* CollectionViewCell.swift */,
+				33876430278F41FF0054D7C1 /* ColumnLayout.swift */,
+				33876433278F41FF0054D7C1 /* ImageView.swift */,
+				3387642E278F41FF0054D7C1 /* ImageViewExtension.swift */,
+				33876425278F41FF0054D7C1 /* Label.swift */,
+				33876436278F41FF0054D7C1 /* NavigationController.swift */,
+				33876434278F41FF0054D7C1 /* RatingBar.swift */,
+				3387642C278F41FF0054D7C1 /* ScrollView.swift */,
+				33876429278F41FF0054D7C1 /* StackView.swift */,
+				3387642F278F41FF0054D7C1 /* TextField.swift */,
+				33876432278F41FF0054D7C1 /* UIResponderExt.swift */,
+				3387642A278F41FF0054D7C1 /* UIviewExt.swift */,
+				33876427278F41FF0054D7C1 /* View.swift */,
+				33876426278F41FF0054D7C1 /* ViewController.swift */,
+				33876428278F41FF0054D7C1 /* ViewControllerExt.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -279,12 +278,13 @@
 			path = Scripts;
 			sourceTree = "<group>";
 		};
-		CDD35888285E89FE00CDDACE /* Theme */ = {
+		CDD35888285E89FE00CDDACE /* Values */ = {
 			isa = PBXGroup;
 			children = (
+				33876431278F41FF0054D7C1 /* Dimens.swift */,
 				CDD35889285E8A0B00CDDACE /* Theme.swift */,
 			);
-			path = Theme;
+			path = Values;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

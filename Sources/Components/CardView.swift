@@ -18,14 +18,16 @@ class CardView : View {
         ])
         
         contentView.layer.masksToBounds = true
-        contentView.layer.cornerRadius = 6.0
-        contentView.layer.borderWidth = 0.0
+        contentView.layer.cornerRadius = theme.shapeMedium.cornerRadius
+        contentView.layer.maskedCorners = theme.shapeMedium.maskedCorners
+        contentView.layer.borderWidth = theme.shapeMedium.borderWidth
         
         layer.masksToBounds = false
-        layer.cornerRadius = 6.0
-        layer.borderWidth = 0.0
+        layer.cornerRadius = theme.shapeMedium.cornerRadius
+        layer.maskedCorners = theme.shapeMedium.maskedCorners
+        layer.borderWidth = theme.shapeMedium.borderWidth
         
-        layer.shadowColor = UIColor.lightGray   .cgColor
+        layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 0.7
         layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
@@ -34,5 +36,5 @@ class CardView : View {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
 }
+
