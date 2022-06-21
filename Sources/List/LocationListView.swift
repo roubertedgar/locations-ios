@@ -22,6 +22,8 @@ class LocationCollectionView {
         list.dataSource = controller
         list.delegate = controller
         list.translatesAutoresizingMaskIntoConstraints = false
+        
+        list.backgroundColor = ThemeManager.shared.theme.colorBackground
     }
     
     

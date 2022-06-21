@@ -146,7 +146,7 @@
 		3387641B278F41FF0054D7C1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CDACEB1A2861800100D1B70B /* Theme */,
+				CDACEB1B2861800E00D1B70B /* AppTheme.swift */,
 				33876450278F41FF0054D7C1 /* AppDelegate.swift */,
 				33876422278F41FF0054D7C1 /* AppComponent.swift */,
 				33876423278F41FF0054D7C1 /* NeedleGenerated.swift */,
@@ -289,14 +289,6 @@
 			children = (
 				CDD35889285E8A0B00CDDACE /* Theme.swift */,
 				CDACEB1728617D5400D1B70B /* ThemeManager.swift */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
-		CDACEB1A2861800100D1B70B /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				CDACEB1B2861800E00D1B70B /* AppTheme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";

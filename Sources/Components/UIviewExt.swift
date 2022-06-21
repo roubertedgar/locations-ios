@@ -25,3 +25,11 @@ extension UIResponder {
         return keyWindow.safeAreaInsets
     }
 }
+
+extension UIView {
+    var theme: Theme {
+        get {
+            return ThemeManager.shared.theme
+        }
+    }
+}

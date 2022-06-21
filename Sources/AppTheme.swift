@@ -5,7 +5,7 @@ class AppTheme : Theme {
     var colorPrimaryVariant = UIColor.blue
     var colorSecondary = UIColor.gray
     var colorSecondaryVariant = UIColor.darkGray
-    var colorBackground = UIColor.lightGray
+    var colorBackground = UIColor.white
     var colorSurface = UIColor.white
     var colorError = UIColor.red
     var colorOnPrimary = UIColor.black

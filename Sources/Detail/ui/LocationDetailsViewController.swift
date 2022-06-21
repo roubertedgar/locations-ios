@@ -10,7 +10,6 @@ class LocationDetailsViewController : UIViewController {
         locationDetailsView.topbarHeight = topBarHeight
         
         view.addSubview(locationDetailsView)
-        view.backgroundColor = .white
         NSLayoutConstraint.activate([
             locationDetailsView.topAnchor.constraint(equalTo: view.topAnchor),
             locationDetailsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
