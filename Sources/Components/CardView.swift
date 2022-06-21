@@ -8,6 +8,7 @@ class CardView : View {
     override init(){
         super.init()
         
+        self.backgroundColor = theme.colorSurface
         self.addSubview(contentView)
         
         NSLayoutConstraint.activate([
@@ -37,4 +38,3 @@ class CardView : View {
         super.init(coder: coder)
     }
 }
-

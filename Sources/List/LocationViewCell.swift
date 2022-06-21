@@ -45,7 +45,6 @@ class LocationViewCell : CollectionViewCell {
         cardView.contentView.addSubview(locationImage)
         cardView.contentView.addSubview(locationTitle)
         cardView.contentView.addSubview(locationType)
-        cardView.backgroundColor = UIColor.white
         setupConstraints()
     }
     
