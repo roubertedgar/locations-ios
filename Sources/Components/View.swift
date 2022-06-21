@@ -2,7 +2,11 @@ import UIKit
 
 class View : UIView {
     
-    let theme = Theme.instance
+    var theme: Theme {
+        get {
+            return ThemeManager.shared.theme
+        }
+    }
     
     init(){
         super.init(frame: .zero)

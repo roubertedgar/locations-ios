@@ -52,6 +52,8 @@
 		33CA1462276B1A2C002CDDCD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1461276B1A2C002CDDCD /* Kingfisher */; };
 		33CA1465276B1A3A002CDDCD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1464276B1A3A002CDDCD /* Alamofire */; };
 		33CA1468276B1A52002CDDCD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 33CA1467276B1A52002CDDCD /* Cosmos */; };
+		CDACEB1828617D5400D1B70B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACEB1728617D5400D1B70B /* ThemeManager.swift */; };
+		CDACEB1C2861800E00D1B70B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACEB1B2861800E00D1B70B /* AppTheme.swift */; };
 		CDD3588A285E8A0B00CDDACE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD35889285E8A0B00CDDACE /* Theme.swift */; };
 		CDD3588C2860046D00CDDACE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD3588B2860046D00CDDACE /* CardView.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		3387647F278F428D0054D7C1 /* build-script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "build-script.sh"; sourceTree = "<group>"; };
 		33876489278F4F6E0054D7C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3387648B278F50330054D7C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CDACEB1728617D5400D1B70B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CDACEB1B2861800E00D1B70B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		CDD35889285E8A0B00CDDACE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CDD3588B2860046D00CDDACE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +146,7 @@
 		3387641B278F41FF0054D7C1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDACEB1A2861800100D1B70B /* Theme */,
 				33876450278F41FF0054D7C1 /* AppDelegate.swift */,
 				33876422278F41FF0054D7C1 /* AppComponent.swift */,
 				33876423278F41FF0054D7C1 /* NeedleGenerated.swift */,
@@ -169,6 +174,7 @@
 		33876424278F41FF0054D7C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CDACEB1928617DB800D1B70B /* Theme */,
 				CDD35888285E89FE00CDDACE /* Values */,
 				3387642D278F41FF0054D7C1 /* ApplyProtocol.swift */,
 				33876435278F41FF0054D7C1 /* Button.swift */,
@@ -278,11 +284,27 @@
 			path = Scripts;
 			sourceTree = "<group>";
 		};
+		CDACEB1928617DB800D1B70B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CDD35889285E8A0B00CDDACE /* Theme.swift */,
+				CDACEB1728617D5400D1B70B /* ThemeManager.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CDACEB1A2861800100D1B70B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CDACEB1B2861800E00D1B70B /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		CDD35888285E89FE00CDDACE /* Values */ = {
 			isa = PBXGroup;
 			children = (
 				33876431278F41FF0054D7C1 /* Dimens.swift */,
-				CDD35889285E8A0B00CDDACE /* Theme.swift */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -391,7 +413,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33876471278F41FF0054D7C1 /* LocationListComponent.swift in Sources */,
+				CDACEB1C2861800E00D1B70B /* AppTheme.swift in Sources */,
 				331258332815191300D574C2 /* LocationListView.swift in Sources */,
+				CDACEB1828617D5400D1B70B /* ThemeManager.swift in Sources */,
 				3387647A278F41FF0054D7C1 /* LocationListViewModel.swift in Sources */,
 				33876473278F41FF0054D7C1 /* LocationViewCell.swift in Sources */,
 				3387646E278F41FF0054D7C1 /* LocationDetailsView.swift in Sources */,
