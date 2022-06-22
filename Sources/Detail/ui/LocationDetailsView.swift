@@ -3,7 +3,7 @@ import Cosmos
 
 internal class LocationDetailsView: View {
     
-    override init(){
+    init(){
         super.init()
         setupView()
         setupImage()

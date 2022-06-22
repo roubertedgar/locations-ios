@@ -9,7 +9,7 @@ class LocationInfoView: View{
     private let phoneNumberIcon = ImageView().apply { $0.image = UIImage(named: "ic_phone")}
     private let addressIcon = ImageView().apply { $0.image = UIImage(named: "ic_pin")}
     
-    override init(){
+    init(){
         super.init()
         
         addSubview(workingHoursText)

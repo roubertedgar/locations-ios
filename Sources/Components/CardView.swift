@@ -5,7 +5,7 @@ class CardView : View {
     
     let contentView = View()
     
-    override init(){
+    init(){
         super.init()
         
         self.backgroundColor = theme.colorSurface

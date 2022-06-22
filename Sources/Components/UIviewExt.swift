@@ -26,10 +26,3 @@ extension UIResponder {
     }
 }
 
-extension UIView {
-    var theme: Theme {
-        get {
-            return ThemeManager.shared.theme
-        }
-    }
-}

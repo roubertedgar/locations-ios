@@ -19,7 +19,7 @@ class ReviewCell : View {
     private let review = Label()
     private let author = Label()
     
-    override init(){
+    init(){
         super.init()
         addSubview(profilePicture)
         addSubview(stars)
