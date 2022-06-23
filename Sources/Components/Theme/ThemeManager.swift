@@ -14,7 +14,7 @@ class ThemeManager {
     }
     
     private init(){
-        lightTheme = DefaultTheme()
+        lightTheme = AppTheme()
         darkTheme = lightTheme
     }
     

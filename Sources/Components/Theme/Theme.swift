@@ -22,22 +22,6 @@ protocol Theme {
     //headline3
     //headline4
     //headline5
-    
-    func copy(
-        colorPrimary : UIColor?,
-        colorPrimaryVariant : UIColor? ,
-        colorSecondary : UIColor? ,
-        colorSecondaryVariant : UIColor? ,
-        colorBackground : UIColor? ,
-        colorSurface : UIColor? ,
-        colorError : UIColor? ,
-        colorOnPrimary : UIColor? ,
-        colorOnSecondary : UIColor? ,
-        colorOnBackground : UIColor? ,
-        colorOnSurface : UIColor? ,
-        colorOnError : UIColor? ,
-        shapeMedium : ShapeStyle?
-    ) -> Theme
 }
 
 struct ShapeStyle {
@@ -55,81 +39,18 @@ struct ShapeStyle {
         }
 }
 
-class DefaultTheme : Theme {
-    
-    var colorPrimary: UIColor
-    var colorPrimaryVariant: UIColor
-    var colorSecondary: UIColor
-    var colorSecondaryVariant: UIColor
-    var colorBackground: UIColor
-    var colorSurface: UIColor
-    var colorError: UIColor
-    var colorOnPrimary: UIColor
-    var colorOnSecondary: UIColor
-    var colorOnBackground: UIColor
-    var colorOnSurface: UIColor
-    var colorOnError: UIColor
-    var shapeMedium : ShapeStyle
-    
-    init(
-        colorPrimary: UIColor = UIColor.white ,
-        colorPrimaryVariant: UIColor = UIColor.white ,
-        colorSecondary: UIColor = UIColor.white ,
-        colorSecondaryVariant: UIColor = UIColor.white ,
-        colorBackground: UIColor = UIColor.white ,
-        colorSurface: UIColor = UIColor.white ,
-        colorError: UIColor = UIColor.white ,
-        colorOnPrimary: UIColor = UIColor.white ,
-        colorOnSecondary: UIColor = UIColor.white ,
-        colorOnBackground: UIColor = UIColor.white ,
-        colorOnSurface: UIColor = UIColor.white ,
-        colorOnError: UIColor = UIColor.white,
-        shapeMedium: ShapeStyle = ShapeStyle(cornerRadius: 0.0, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner])) {
-            
-            self .colorPrimary = colorPrimary
-            self .colorPrimaryVariant = colorPrimaryVariant
-            self .colorSecondary = colorSecondary
-            self .colorSecondaryVariant = colorSecondaryVariant
-            self .colorBackground = colorBackground
-            self .colorSurface = colorSurface
-            self .colorError = colorError
-            self .colorOnPrimary = colorOnPrimary
-            self .colorOnSecondary = colorOnSecondary
-            self .colorOnBackground = colorOnBackground
-            self .colorOnSurface = colorOnSurface
-            self .colorOnError = colorOnError
-            self .shapeMedium = shapeMedium
-        }
-    
-    func copy(
-        colorPrimary: UIColor? = nil,
-        colorPrimaryVariant: UIColor? = nil,
-        colorSecondary: UIColor? = nil,
-        colorSecondaryVariant: UIColor? = nil,
-        colorBackground: UIColor? = nil,
-        colorSurface: UIColor? = nil,
-        colorError: UIColor? = nil,
-        colorOnPrimary: UIColor? = nil,
-        colorOnSecondary: UIColor? = nil,
-        colorOnBackground: UIColor? = nil,
-        colorOnSurface: UIColor? = nil,
-        colorOnError: UIColor? = nil,
-        shapeMedium: ShapeStyle? = nil) -> Theme {
-            return DefaultTheme(
-                colorPrimary: colorPrimary ?? self.colorPrimary,
-                colorPrimaryVariant: colorPrimaryVariant ?? self.colorPrimaryVariant,
-                colorSecondary: colorSecondary ?? self.colorSecondary,
-                colorSecondaryVariant: colorSecondaryVariant ?? self.colorSecondaryVariant,
-                colorBackground: colorBackground ?? self.colorBackground,
-                colorSurface: colorSurface ?? self.colorSurface,
-                colorError: colorError ?? self.colorError,
-                colorOnPrimary: colorOnPrimary ?? self.colorOnPrimary,
-                colorOnSecondary: colorOnSecondary ?? self.colorOnSecondary,
-                colorOnBackground: colorOnBackground ?? self.colorOnBackground,
-                colorOnSurface: colorOnSurface ?? self.colorOnSurface,
-                colorOnError: colorOnError ?? self.colorOnError,
-                shapeMedium: shapeMedium ?? self.shapeMedium
-            )
-        }
-    
+class AppTheme : Theme {
+    var colorPrimary : UIColor { UIColor.white }
+    var colorPrimaryVariant :  UIColor { UIColor.white }
+    var colorSecondary :  UIColor { UIColor.white }
+    var colorSecondaryVariant :  UIColor { UIColor.white }
+    var colorBackground :  UIColor { UIColor.white }
+    var colorSurface :  UIColor { UIColor.white }
+    var colorError :  UIColor { UIColor.white }
+    var colorOnPrimary :  UIColor { UIColor.white }
+    var colorOnSecondary :  UIColor { UIColor.white }
+    var colorOnBackground :  UIColor { UIColor.white }
+    var colorOnSurface :  UIColor { UIColor.white }
+    var colorOnError :  UIColor { UIColor.white }
+    var shapeMedium : ShapeStyle { ShapeStyle(cornerRadius: 0.0, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]) }
 }
